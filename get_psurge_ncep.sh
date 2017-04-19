@@ -6,9 +6,9 @@
 # Shell Used: BASH shell
 # Original Author(s): Douglas.Gaer@noaa.gov
 # File Creation Date: 07/20/2015
-# Date Last Modified: 01/12/2017
+# Date Last Modified: 04/19/2017
 #
-# Version control: 1.04
+# Version control: 1.05
 #
 # Support Team:
 #
@@ -41,8 +41,8 @@ WGET="/usr/bin/wget"
 # Meta file
 # http://weather.noaa.gov/pub/SL.us008001/ST.opnl/DF.gr2/DC.ndgd/GT.slosh/AR.conus/ds.psurge.txt
 # Data directory
-# http://nomads.ncep.noaa.gov/pub/data/nccf/com/nhc/prod/psurge.20150616/
-# http://nomads.ncep.noaa.gov/pub/data/nccf/com/nhc/prod/psurge.20150616/psurge.t2015061606z.al022015_e10_inc_dat.conus_625m.grib2
+# Data directory for 2017                                                                                                                                                                
+# http://tgftp.nws.noaa.gov/SL.us008001/ST.opnl/DF.gr2/DC.ndgd/GT.slosh/AR.conus/
 
 echo "Starting PSurge data processing"
 
@@ -143,9 +143,9 @@ cat /dev/null > ${SPOOLdir}/psurge_prev_downloads.txt
 for e in ${elevels}
 do
     cd ${SPOOLdir}
-    url="http://nomads.ncep.noaa.gov/pub/data/nccf/com/nhc/prod/psurge.${YYYYMMDD}"
-    file="psurge.t${SYNOPTICTIME}z.${strmid}_e${e}_inc_dat.conus_625m.grib2"
-    outfile="${file}"
+    url="http://tgftp.nws.noaa.gov/SL.us008001/ST.opnl/DF.gr2/DC.ndgd/GT.slosh/AR.conus"
+    file="ds.psurgeexcd${e}.bin"
+    outfile="psurge.t${SYNOPTICTIME}z.${strmid}_e${e}_inc_dat.conus_625m.grib2"
     echo "Downloading $url/$file to $outfile"
     echo "$WGET ${WGETargs} ${url}/${file}" 2>&1
     $WGET ${WGETargs} ${url}/${file} 2>&1
@@ -154,7 +154,7 @@ do
     cd ${PRODUCTdir}
     # TODO: Add any clipping here
 
-    echo "${file}" >> ${SPOOLdir}/psurge_prev_downloads.txt
+    echo "${outfile}" >> ${SPOOLdir}/psurge_prev_downloads.txt
 done
 
 datetime=$(date -u)
