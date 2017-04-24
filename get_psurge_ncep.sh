@@ -6,9 +6,9 @@
 # Shell Used: BASH shell
 # Original Author(s): Douglas.Gaer@noaa.gov
 # File Creation Date: 07/20/2015
-# Date Last Modified: 04/19/2017
+# Date Last Modified: 04/24/2017
 #
-# Version control: 1.05
+# Version control: 1.07
 #
 # Support Team:
 #
@@ -144,7 +144,7 @@ for e in ${elevels}
 do
     cd ${SPOOLdir}
     url="http://tgftp.nws.noaa.gov/SL.us008001/ST.opnl/DF.gr2/DC.ndgd/GT.slosh/AR.conus"
-    file="ds.psurgeexcd${e}.bin"
+    file="ds.psurgeexcd${e}inc.bin"
     outfile="psurge.t${SYNOPTICTIME}z.${strmid}_e${e}_inc_dat.conus_625m.grib2"
     echo "Downloading $url/$file to $outfile"
     echo "$WGET ${WGETargs} ${url}/${file}" 2>&1
