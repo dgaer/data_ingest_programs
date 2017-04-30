@@ -1,0 +1,6 @@
+NOTIFYME:
+---------
+notifyme -vl- -f ANY -h server1.example.com -o 1000000
+notifyme -v -l- -h server2.example.com -f NEXRAD3 -p "SDUS.*/p(N0Q)" -o 3600
+
+

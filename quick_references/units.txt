@@ -1,0 +1,129 @@
+#
+#  Temperature
+#    F - fahrenheit
+#    C - Celsius
+#    K - Kelvin
+#
+F       C       *.55555-17.77777
+F       K       *.55555+255.37222
+C       F       *1.8+32
+C       K       +273.15
+K       F       *1.8-459.67
+K       C       -273.15
+dF      dC      *.55555
+dF      dK      *.55555
+dC      dK      *1
+dC      dF      *1.8
+dK      dC      *1
+dK      dF      *1.8
+#
+#  Speed
+#    knt - knots
+#    m/s - meters/sec
+#    mi/hr - miles/hour
+#    km/hr - kilometers/hour
+#
+knt     m/s     *.5144
+knt     mi/hr   *1.1508
+knt     km/hr   *1.852
+mi/hr   knt     *.86897
+mi/hr   m/s     *.4470
+mi/hr   km/hr   *1.60934
+m/s     knt     *1.944
+m/s     mi/hr   *2.23694
+m/s     km/hr   *3.6
+km/hr   knt     *.53996
+km/hr   m/s     *.277777
+km/hr   mi/hr   *.621388
+#
+#  Length
+#    in - inches
+#    ft - feet
+#    nm - nautical miles
+#    mi - miles
+#    mm - millimeters
+#    cm - centimeters
+#    m - meters
+#    km - kilometers
+#
+in      mm      *25.4
+in      cm      *2.54
+in      ft      *.083333
+cm      mm      *10
+cm      in      *.393701
+mm      cm      *.1
+mm      in      *.039370
+ft      m       *.3048
+m       ft      *3.28084
+mi      km      *1.60934
+mi      nm      *1.1508
+nm      mi      *.868961
+nm      km      *1.852
+km      mi      *.62137
+km      nm      *.53996
+#
+#  Precipitation
+#    kg/m^2 - the same as mm
+#    in
+#    mm
+#    cm
+#
+kg/m^2  cm     *.1 
+kg/m^2  mm     *1 
+kg/m^2  in     *.039370 
+cm      kg/m^2 *10
+mm      kg/m^2 *1
+in      kg/m^2 *25.4
+#
+#  Precipitation rate
+#    kg/m^2/s - the same as mm/s
+#    in/hr
+#    mm/s
+#    cm/hr
+#
+kg/m^2/s cm/hr *360
+kg/m^2/s mm/hr *3600
+kg/m^2/s in/hr *141.7323
+#
+#  Moisture content
+#    kg/kg
+#    g/kg
+#
+kg/kg   g/kg   *1000
+g/kg    kg/kg  *.001
+#
+#  Pressure
+#    in_HG - inches Mercury
+#    mb - millibars
+#    Pa - Pascals
+#    
+in_Hg   mb     *33.85399
+in_Hg   Pa     *3385.399
+mb      Pa     *100
+mb      in_Hg  *.0295386
+Pa      mb     *.01
+Pa      in_Hg  *2.95386e-4
+#
+#  Pressure tendency/ Vertical velocity
+#    mb/3hr
+#    Pa/s
+#    mb/hr
+#    mb/s
+#    ub/s
+#
+Pa/s    mb/hr  *36
+Pa/s    ub/s   *10
+Pa/s    mb/s   *.01
+mb/s    ub/s   *1000
+mb/s    Pa/s   *100
+ub/s    mb/s   *100
+ub/s    Pa/s   *.1
+#
+#  Lapse rate
+#
+dK/m    dK/km  *1000
+dK/m    dC/km  *1000
+dK/m    dF/km  *1800
+dK/m    dF/ft  *.59055
+dK/m    dF/mi  *3118.11
+

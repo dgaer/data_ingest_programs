@@ -1,0 +1,20 @@
+DEGRIB commands
+
+For GRADS display
+-----------------
+degrib psurge.t2017011212z.al832017_e10_inc_dat.conus_625m.grib2  -C -msg 1 -Flt -Interp -GrADS
+
+Inventory
+---------
+degrib psurge.t2017011212z.al832017_e10_inc_dat.conus_625m.grib2 -I
+
+Convert to shape
+----------------
+degrib psurge.t2017011212z.al832017_e10_inc_dat.conus_625m.grib2 -C -msg 1 -Shp
+
+
+
+
+
+
+

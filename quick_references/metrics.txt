@@ -1,0 +1,32 @@
+Temputure:
+---------
+C to F: Multiply the temperature by 2 and then add 30
+(actual formula is multiply by 1.8, add 32)
+ex: 22 C is roughly equal to 74 degrees using my method, 
+actualconversion is 71.6
+
+F to C: Subtract 30 from the temp and then divide by 2
+(actual formula constants are 1.8 and 32)
+
+Length:
+------
+1 meter = 3.28 feet
+1 meter = 1.094 yards
+1 centimeter = .0328 feet
+1 kilometer = .621 miles
+1 centimeter = .394 inches
+
+
+Volume
+-------
+1 gallon = 3.785 liters
+1 fluid once = 29.57 millilters
+
+Mass
+-----
+1 ounce = 28.349 grams
+1 ounce = 28349.5 milligrams
+1 milligram = .000035 onces
+1 ton = 907.185 kilograms
+1 pound = 0.453592 kilograms
+
